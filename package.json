@@ -1,0 +1,35 @@
+{
+  "name": "swipe-like",
+  "version": "1.0.0",
+  "description": "swipe&like test task",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartaGreen/swipe-like.git"
+  },
+  "author": "mariia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartaGreen/swipe-like/issues"
+  },
+  "homepage": "https://github.com/MartaGreen/swipe-like#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "html-webpack-pug-plugin": "^4.0.0",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1"
+  },
+  "devDependencies": {
+    "sass": "^1.53.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  }
+}
