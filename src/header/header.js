@@ -1,4 +1,5 @@
 import "./header.scss";
+import "./header.hover.scss";
 
 import "../../assets/images/header/search.svg";
 

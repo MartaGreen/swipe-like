@@ -7,13 +7,47 @@
   font-size: 18px;
   line-height: 25px;
 
+  cursor: pointer;
+
   &.btn_yellow {
     background: #ffcc2d;
   }
   &.btn_black {
+    position: relative;
+
     background: #090808;
     color: white;
     font-weight: 800;
+
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: -20%;
+      right: -20%;
+      top: 0;
+      bottom: 0;
+
+      display: block;
+      background: #ffffff;
+      color: black;
+
+      z-index: -1;
+      transition: 0.5s;
+      transform: skewX(-45deg) scale(0, 1);
+    }
+
+    &:hover {
+      color: #000000;
+
+      &::after {
+        transform: skewX(-45deg) scale(0.75, 0.9);
+      }
+    }
   }
 
   &.btn_main {
