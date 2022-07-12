@@ -1,0 +1,27 @@
+.btn {
+  outline: none;
+  border: none;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 18px;
+  line-height: 25px;
+
+  &.btn_yellow {
+    background: #ffcc2d;
+  }
+  &.btn_black {
+    background: #090808;
+    color: white;
+    font-weight: 800;
+  }
+
+  &.btn_main {
+    width: 370px;
+    height: 64px;
+  }
+  &.btn_header {
+    width: 233px;
+    height: 55px;
+  }
+}
