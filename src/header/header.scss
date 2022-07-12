@@ -7,19 +7,18 @@
   margin: 50px auto 40px auto;
 
   .header__search {
-    width: 931px;
-    // height: 44.5px;
+    width: 935px;
 
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 
     border-bottom: 1px solid black;
-    padding: 0 20px 14px 20px;
-    margin-left: 27px;
+    padding: 0 20px 12px 14px;
+    margin-left: 25px;
 
     .search__inp {
-      width: 100%;
+      width: 95%;
       height: 25px;
 
       border: none;
@@ -27,6 +26,7 @@
 
       font-size: 18px;
       line-height: 25px;
+      color: #828282;
     }
   }
 
@@ -39,14 +39,24 @@
     align-items: center;
 
     .user__item {
+      max-width: 70px;
+
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
 
+      &.user__cart {
+      }
+      &.user__profile {
+        margin-left: 6px;
+      }
+      &.user__like {
+      }
+
       .item__icon {
         max-width: 30px;
-        max-height: 28px;
+        height: 46px;
       }
       .item__name {
         font-size: 15px;
