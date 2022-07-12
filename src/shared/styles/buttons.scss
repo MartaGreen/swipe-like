@@ -25,3 +25,23 @@
     height: 55px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .btn {
+    &.btn_header {
+      width: 187px;
+      height: 47px;
+
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .btn {
+    &.btn_header {
+      width: 100%;
+    }
+  }
+}

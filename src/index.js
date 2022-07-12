@@ -1,3 +1,4 @@
+import "normalize-scss";
 import "./index.scss";
 import "./fonts.scss";
 

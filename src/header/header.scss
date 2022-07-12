@@ -1,13 +1,17 @@
 .header {
-  width: 86.6%;
+  width: 85.9%;
+  max-width: 1920px;
+  min-width: 280px;
 
   display: flex;
   justify-content: space-between;
+  gap: 0 20px;
 
   margin: 50px auto 40px auto;
 
   .header__search {
-    width: 935px;
+    // width: 935px;
+    width: 56.67%;
 
     display: flex;
     justify-content: space-between;
@@ -31,19 +35,23 @@
   }
 
   .header__user {
-    width: 300px;
+    // width: 300px;
+    width: 18.2%;
+    min-width: 220px;
     height: 54px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0 5px;
 
     .user__item {
       max-width: 70px;
+      height: 116%;
 
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-end;
       align-items: center;
 
       &.user__cart {
@@ -56,12 +64,106 @@
 
       .item__icon {
         max-width: 30px;
-        height: 46px;
+        // height: 46px;
       }
       .item__name {
         font-size: 15px;
         line-height: 20px;
       }
+    }
+  }
+
+  .header__search-dropdown {
+    width: 100%;
+
+    .search-dropdown__inp {
+      width: 90%;
+      height: 25px;
+
+      border: none;
+      outline: none;
+
+      font-size: 18px;
+      line-height: 25px;
+      color: #828282;
+
+      padding: 12px 20px;
+      border-bottom: 1px solid black;
+    }
+
+    &.header__search-dropdown_hidden {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    width: 94.9%;
+    margin-top: 25px;
+    gap: 0 40px;
+
+    .header__search {
+      width: 30.8%;
+      padding: 0 11px 4px 8px;
+      margin-left: 0px;
+    }
+
+    .header__user {
+      height: 38px;
+      width: 30.3%;
+      min-width: 120px;
+
+      .user__item {
+        position: relative;
+
+        .item__name {
+          display: none;
+        }
+
+        &.user__like {
+          .item__icon svg {
+            fill: #000000;
+          }
+        }
+        &.user__profile {
+          margin-left: 0;
+        }
+        &.user__cart::after {
+          content: "";
+
+          position: absolute;
+          top: 8px;
+          right: -6px;
+
+          width: 12px;
+          height: 12px;
+          background: #ffcc2d;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    width: 87.5%;
+    flex-wrap: wrap;
+    gap: 13px 0;
+    margin-top: 20px;
+
+    .header__search {
+      width: 30%;
+      border: none;
+      padding: 0;
+
+      .search__inp {
+        display: none;
+      }
+    }
+
+    .header__user {
+      width: 70%;
     }
   }
 }
