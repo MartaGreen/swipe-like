@@ -1,0 +1,57 @@
+.page {
+  width: 85.9%;
+  margin: 0 auto;
+
+  .page__history {
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    margin-left: 0.2%;
+
+    .history__item {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 120%;
+      color: #bdbdbd;
+
+      margin-right: 20px;
+
+      &:not(:last-child)::after {
+        content: "";
+
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+
+        border-bottom: 2px solid rgb(92, 92, 92);
+        border-right: 2px solid rgb(92, 92, 92);
+        transform: rotate(-45deg);
+        margin-left: 26px;
+      }
+      &:last-child {
+        color: #068145;
+      }
+    }
+  }
+
+  .page__title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 66px;
+    text-transform: uppercase;
+    color: #090808;
+    text-align: left;
+
+    margin: 11px 0;
+  }
+
+  .page__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: #828282;
+
+    margin: 20px 0;
+  }
+}

@@ -6,11 +6,13 @@
   text-align: center;
   font-size: 18px;
   line-height: 25px;
+  font-family: "Manrope";
 
   cursor: pointer;
 
   &.btn_yellow {
     background: #ffcc2d;
+    font-weight: 600;
   }
   &.btn_black {
     position: relative;
