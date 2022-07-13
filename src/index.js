@@ -1,6 +1,7 @@
 import "normalize-scss";
 import "./index.scss";
 import "./fonts.scss";
+import "./reset.scss";
 
 // shared
 import "./shared/styles/buttons.scss";
