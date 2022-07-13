@@ -1,15 +1,13 @@
 .page {
   width: 86%;
-  max-width: 1920px;
-  min-width: 320px;
-  margin: 0 auto;
+  max-width: 1650px;
+  min-width: 300px;
+  margin: 40px auto;
 
   .page__history {
-    height: 45px;
-
     display: flex;
     align-items: center;
-    margin-left: 0.2%;
+    padding: 13px 3px;
 
     .history__item {
       font-weight: 500;
@@ -55,5 +53,29 @@
     color: #828282;
 
     margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page {
+    width: 94.8%;
+    margin: 0 auto;
+
+    .page__history {
+      padding: 19px 0px;
+    }
+
+    .page__title {
+      font-size: 36px;
+      line-height: 49px;
+      margin: 0;
+    }
+
+    .page__description {
+      width: 91%;
+      line-height: 25px;
+      letter-spacing: 0.2px;
+      margin: 9px 0;
+    }
   }
 }

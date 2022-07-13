@@ -1,9 +1,14 @@
 .program {
   width: 100%;
+  max-width: 529px;
   height: 287px;
 
   display: flex;
   align-items: flex-end;
+  justify-items: center;
+
+  background-size: cover;
+  background-position: center;
 
   .program__info {
     width: 100%;
@@ -31,6 +36,14 @@
         font-size: 18px;
         line-height: 150%;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .program {
+    .program__info {
+      padding: 25px 25px 19px 25px;
     }
   }
 }

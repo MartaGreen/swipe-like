@@ -24,7 +24,7 @@ p {
   }
 
   .index-page__btn {
-    margin: 14px 0;
+    margin: 16px 0;
   }
 
   .programs {
@@ -32,8 +32,21 @@ p {
 
     display: grid;
     grid-gap: 32px;
-    grid-template-columns: repeat(auto-fit, minmax(355px, 529px));
+    grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
 
-    margin: 68px 0px;
+    margin: 65px 0px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .index-page {
+    .programs {
+      grid-gap: 18px;
+      margin: 33px 0px;
+    }
+
+    .index-page__btn {
+      margin: 24px 0;
+    }
   }
 }
