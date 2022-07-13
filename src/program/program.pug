@@ -1,0 +1,12 @@
+mixin Program({name, complex, image})
+  .program(style=`background-image: url(${image});`)
+    .program__info
+      .program__icon 
+        img(src="images/corp-icon.svg", alt="corporation_icon")
+
+      .program__description 
+        h3(class="program__title")= name 
+        .program__complex 
+          span(class="complex__duration")= complex.duration
+          span(class="complex__separator") &nbsp;|&nbsp;
+          span(class="complex__exercises")= `${complex.countOfExercises} упражнений`

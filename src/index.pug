@@ -1,5 +1,10 @@
 -
   var history = ['Главная', 'Умная площадка']
+  var programs = [
+    {name: 'Разминка', complex: {duration:'10-15 мин.', countOfExercises: 8}, image: 'images/warm-up.png'},
+    {name: 'Программа 1', complex: {duration:'3 недели', countOfExercises: 6}, image: 'images/program1.png'},
+    {name: 'Программа 2', complex: {duration:'6 недель', countOfExercises: 10}, image: 'images/program2.png'}
+  ]
 
 doctype html
 html(lang="en")
@@ -17,3 +22,9 @@ html(lang="en")
       h1(class="page__title index-page__title") УМНАЯ СПОРТИВНАЯ ПЛОЩАДКА по приказу №107 ОТ 23.03.2022
       p(class="page__description index-page__description") Уличная площадка с тренажерным комплексом из 21 тренажера. Для иллюстрации упражнений лучше конечно использовать анимацию, пусть и простую. Сможем ли мы получить исходники изображений в векторе (svg)? Нам так было бы удобнее делать анимацию. Размер изображений для разных упражнений должен быть одинаковый по размеру и пропорциям. Для каждого изображений одного упражнения - оборудование должно быть неподвижно и находиться в одном месте
       button(class="btn btn_main btn_yellow index-page__btn") Оборудование в каталоге
+
+      .programs 
+        include ./program/program.pug
+        each program in programs 
+          +Program(program)
+
