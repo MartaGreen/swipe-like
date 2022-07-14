@@ -22,7 +22,8 @@ html(lang="en")
         each hist_item in history
           span(class="history__item")= hist_item
 
-      button(class="back-btn program1-page__back-btn") Назад
+      include ../../components/back-btn/back-btn.pug 
+      +BackBtn('Назад')
 
       h1(class="page__title program1-page__title") Программа 1
         p(class="program1-page__title-footer") 3 недели | 6 упражнений
