@@ -1,8 +1,10 @@
-.btn {
-  position: relative;
-
+button {
   outline: none;
   border: none;
+}
+
+.btn {
+  position: relative;
 
   text-transform: uppercase;
   text-align: center;
@@ -76,6 +78,17 @@
     width: 233px;
     height: 55px;
   }
+}
+
+.back-btn {
+  width: 91px;
+  height: 32px;
+
+  background: #ffcc2d;
+  color: #090808;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
 }
 
 @media screen and (max-width: 900px) {
