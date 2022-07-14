@@ -1,7 +1,7 @@
 import "./header.scss";
 import "./header.hover.scss";
 
-import "../../assets/images/header/search.svg";
+import "../../../assets/images/header/search.svg";
 
 window.onload = () => {
   const header = document.querySelector(".header");

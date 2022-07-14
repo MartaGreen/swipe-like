@@ -14,7 +14,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Smart platform
   body 
-    include ./header/header.pug
+    include ../../components/header/header.pug
     main(class="page index-page")
       .page__history
         each hist_item in history
@@ -26,7 +26,7 @@ html(lang="en")
       button(class="btn btn_main btn_yellow index-page__btn") Оборудование в каталоге
 
       .programs 
-        include ./program/program.pug
+        include ../../components/program/program.pug
         each program in programs 
           +Program(program)
 

@@ -7,14 +7,21 @@ const plugins = [
   new HtmlWebpackPlugin({
     title: "Smart platform",
     filename: "index.html",
-    template: path.resolve(__dirname, "src", "index.pug"),
+    template: path.resolve(__dirname, "src", "pages/index", "index.pug"),
+    chunks: ["build", "index"],
   }),
   new HtmlWebpackPugPlugin(),
   new CleanWebpackPlugin(),
 ];
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: {
+    build: path.resolve(__dirname, "src", "build.js"),
+    index: path.resolve(__dirname, "src", "pages/index", "index.js"),
+  },
+  output: {
+    filename: "[name].[hash].js",
+  },
 
   module: {
     rules: [
