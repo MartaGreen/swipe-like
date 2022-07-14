@@ -1,8 +1,12 @@
 .page {
   width: 86%;
   max-width: 1650px;
-  min-width: 300px;
+  min-width: 280px;
   margin: 40px auto;
+
+  .change-wrap {
+    white-space: normal;
+  }
 
   .page__history {
     display: flex;
@@ -76,6 +80,36 @@
       line-height: 25px;
       letter-spacing: 0.2px;
       margin: 9px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page {
+    width: 88%;
+
+    .change-wrap {
+      white-space: nowrap;
+    }
+
+    .page__history {
+      padding: 14px 0px;
+    }
+
+    .page__title {
+      width: 80%;
+      font-size: 20px;
+      line-height: 27px;
+      margin: 4px 0;
+    }
+
+    .page__description {
+      height: 46px;
+      overflow: hidden;
+
+      font-size: 15px;
+      line-height: 150%;
+      letter-spacing: 0;
     }
   }
 }

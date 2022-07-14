@@ -13,6 +13,7 @@
     display: grid;
     grid-gap: 32px;
     grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+    justify-items: center;
 
     margin: 65px 0px;
   }
@@ -27,6 +28,15 @@
 
     .index-page__btn {
       margin: 24px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .index-page {
+    .programs {
+      margin: 9px 0;
+      grid-gap: 10px;
     }
   }
 }
