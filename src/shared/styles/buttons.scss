@@ -1,4 +1,6 @@
 .btn {
+  position: relative;
+
   outline: none;
   border: none;
 
@@ -8,47 +10,61 @@
   line-height: 25px;
   font-family: "Manrope";
 
+  z-index: 1;
   cursor: pointer;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+
+    display: block;
+
+    z-index: -1;
+    transition: 0.5s;
+    transform: skewX(-45deg) scale(0, 1);
+  }
+
+  &:hover::after {
+    transform: skewX(-45deg) scale(0.75, 0.9);
+  }
 
   &.btn_yellow {
     background: #ffcc2d;
     font-weight: 600;
-  }
-  &.btn_black {
-    position: relative;
 
+    &::after {
+      // backgrounhsl(45, 100%, 59%)fff;
+      background: #000000;
+      color: #ffcc2d;
+    }
+
+    &:hover {
+      color: #ffcc2d;
+    }
+  }
+
+  &.btn_black {
     background: #090808;
     color: white;
     font-weight: 800;
 
     z-index: 1;
     transition: 0.5s;
-    overflow: hidden;
 
     &::after {
-      content: "";
-
-      position: absolute;
-      left: -20%;
-      right: -20%;
-      top: 0;
-      bottom: 0;
-
-      display: block;
-      background: #ffffff;
-      color: black;
-
-      z-index: -1;
-      transition: 0.5s;
-      transform: skewX(-45deg) scale(0, 1);
+      // background: #ffffff;
+      background: #ffcc2d;
+      color: #000000;
     }
 
     &:hover {
       color: #000000;
-
-      &::after {
-        transform: skewX(-45deg) scale(0.75, 0.9);
-      }
     }
   }
 
