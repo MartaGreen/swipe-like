@@ -39,10 +39,11 @@ button {
   &.btn_yellow {
     background: #ffcc2d;
     font-weight: 600;
+    color: #090808;
 
     &::after {
       // backgrounhsl(45, 100%, 59%)fff;
-      background: #000000;
+      background: #090808;
       color: #ffcc2d;
     }
 
@@ -62,11 +63,11 @@ button {
     &::after {
       // background: #ffffff;
       background: #ffcc2d;
-      color: #000000;
+      color: #090808;
     }
 
     &:hover {
-      color: #000000;
+      color: #090808;
     }
   }
 
