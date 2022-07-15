@@ -6,11 +6,19 @@
   width: 91px;
   height: 32px;
 
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
   background: #ffcc2d;
-  color: #090808;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 19px;
+  margin-right: 4px;
 
   cursor: pointer;
+
+  .back-btn__name {
+    color: #090808;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
