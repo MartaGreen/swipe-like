@@ -3,7 +3,6 @@
 
   width: 100%;
   height: 382px;
-  min-width: 355px;
 
   display: flex;
   align-items: flex-end;
@@ -74,5 +73,48 @@
         width: 75%;
       }
     }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .exercise {
+    height: 280px;
+
+    .exercise__icon-wrapper {
+      &.exercise__icon_1 {
+        width: 81%;
+        top: 12px;
+        left: 13px;
+      }
+      &.exercise__icon_2 {
+        width: 61%;
+        top: 13px;
+        left: 28px;
+      }
+    }
+
+    .exercise__description {
+      height: 16.5%;
+      padding: 6px 0 12px 0;
+
+      .exercise__name {
+        width: 85%;
+
+        font-size: 12px;
+        margin-left: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .exercise {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .exercise {
+    height: 142px;
   }
 }

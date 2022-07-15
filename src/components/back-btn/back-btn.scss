@@ -33,3 +33,10 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .back-btn {
+    right: unset;
+    top: 47px;
+  }
+}
