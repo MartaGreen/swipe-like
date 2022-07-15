@@ -19,8 +19,32 @@
 
   .program1-page__exercises {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(131px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
     grid-gap: 30px;
     margin: 60px 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .program1-page {
+    .program1-page__exercises {
+      grid-gap: 18px;
+    }
+
+    .program1-page__history {
+      padding: 8px 0;
+    }
+
+    .program1-page__title {
+      margin: 12px 0;
+    }
+
+    .program1-page__description {
+      margin: 30px 0;
+    }
+
+    .program1-page__btn {
+      margin: 0;
+    }
   }
 }

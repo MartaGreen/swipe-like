@@ -15,10 +15,21 @@
 
   cursor: pointer;
 
+  .back-btn__icon {
+    width: 25%;
+  }
+
   .back-btn__name {
     color: #090808;
     font-weight: 600;
     font-size: 14px;
     line-height: 19px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .back-btn {
+    top: 51px;
+    margin: 0;
   }
 }

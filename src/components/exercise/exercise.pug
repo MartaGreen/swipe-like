@@ -1,6 +1,6 @@
-mixin Exercise({name, bgColor, iconSrc})
+mixin Exercise({name, bgColor, iconSrc, exerciseIconMarkingClass})
   .exercise(style=`background: ${bgColor}; background-image=url(${iconSrc})`)
-    .exercise_icon-wrapper
-      img(src=iconSrc, alt="exercise_icon" class="exercise_icon")
+    .exercise__icon-wrapper(class=exerciseIconMarkingClass)
+      img(src=iconSrc, alt="exercise_icon" class="exercise__icon")
     .exercise__description
       span(class="exercise__name") !{name}

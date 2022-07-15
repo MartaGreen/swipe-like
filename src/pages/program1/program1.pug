@@ -1,10 +1,10 @@
 -
   var history = ['Главная', 'Умная площадка'];
   var exercises = [
-    {name:'Отжимания от&nbsp;перекладины', bgColor: '#3EA43B', iconSrc: "images/exercise1_icon.svg"},
-    {name:'Отжимания обратным хватом', bgColor: '#4D7FCA', iconSrc:'images/exercise2_icon.svg'}, 
-    {name:'Подтягивания на&nbsp;турнике', bgColor: '#FFCC2D', iconSrc: 'images/exercise2_icon.svg'}, 
-    {name:'Скручивания на&nbsp;скамье', bgColor: "linear-gradient(180deg, #FF6262 0%, #E82D2D 100%)", iconSrc: 'images/exercise1_icon.svg'}
+    {name:'Отжимания от&nbsp;перекладины', bgColor: '#3EA43B', iconSrc: "images/exercise1_icon.svg", exerciseIconMarkingClass: "exercise__icon_1"},
+    {name:'Отжимания обратным хватом', bgColor: '#4D7FCA', iconSrc:'images/exercise2_icon.svg', exerciseIconMarkingClass: "exercise__icon_2"}, 
+    {name:'Подтягивания на&nbsp;турнике', bgColor: '#FFCC2D', iconSrc: 'images/exercise2_icon.svg', exerciseIconMarkingClass: "exercise__icon_2"}, 
+    {name:'Скручивания на&nbsp;скамье', bgColor: "linear-gradient(180deg, #FF6262 0%, #E82D2D 100%)", iconSrc: 'images/exercise1_icon.svg', exerciseIconMarkingClass: "exercise__icon_1"}
   ];
 
 doctype html
@@ -18,7 +18,7 @@ html(lang="en")
     include ../../components/header/header.pug
 
     main(class="page program1-page")
-      .page__history
+      .page__history(class="program1-page__history")
         each hist_item in history
           span(class="history__item")= hist_item
 
