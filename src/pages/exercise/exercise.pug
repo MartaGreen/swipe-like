@@ -58,18 +58,7 @@ html(lang="en")
           img(src="images/exercise1_icon.svg", alt="exercise_icon" class="schedule__icon")
           span(class="schedule__icon-text") Отжимания от перекладины
         .schedule__week-tables
+          include ../../components/week-table/week-table.pug
           each table, index in sheduleTables
-            table(class="schedule__week-table")
-              thead(class="week-table__head")
-                tr(class="week-table__head-item week-table__title")
-                  th(class="week-table__column-name" colspan='3') неделя — #{index+1}
-                tr(class="week-table__head-item")
-                  th(class="week-table__column-name week-table__column-day") день
-                  th(class="week-table__column-name week-table__column-sets") подходы
-                  th(class="week-table__column-name week-table__column-itterations") повторения
-              tbody(class="week-table__body")
-                each tableItem, index in table
-                  tr(class=`week-table__body-item ${index%2 == 0 && 'week-table__body-item_gray-bg'}`)
-                    td(class="week-table__column-content")= index+1
-                    td(class="week-table__column-content")= tableItem.exerciseSets
-                    td(class="week-table__column-content")= tableItem.exerciseItterations
+            +WeekTable(table, index)
+            
