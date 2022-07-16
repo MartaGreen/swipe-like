@@ -50,6 +50,10 @@
 
 @media screen and (max-width: 750px) {
   .program1-page {
+    .back-btn {
+      right: unset;
+      top: 47px;
+    }
     .program1-page__exercises {
       margin: 34px 0;
       grid-gap: 19px;
@@ -76,7 +80,6 @@
 
     .program1-page__description {
       width: 100%;
-      height: unset;
       margin: 16px 0;
       line-height: 153%;
     }
