@@ -1,4 +1,5 @@
 .program {
+  position: relative;
   width: 100%;
   max-width: 529px;
   height: 287px;
@@ -18,6 +19,24 @@
     transform: scale(0.95);
   }
 
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    // background: linear-gradient(-45deg, #ffffff00, #ffffff8a);
+    background: radial-gradient(
+      133.55% 429.94% at 0% -4.93%,
+      rgba(255, 255, 255, 0) 34.53%,
+      #ffffff 80.89%
+    );
+  }
+
   .program__info {
     width: 100%;
     height: 15.8%;
@@ -29,6 +48,7 @@
     background: #3ea43b;
     color: #ffffff;
     padding: 23px 39px;
+    z-index: 2;
 
     .program__icon {
       height: 100%;
