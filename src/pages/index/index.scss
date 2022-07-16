@@ -1,8 +1,4 @@
 .index-page {
-  // .index-page__description {
-  //   width: 66.5%;
-  // }
-
   .index-page__btn {
     margin: 16px 0;
   }
@@ -40,6 +36,9 @@
 
 @media screen and (max-width: 370px) {
   .index-page {
+    .index-page__description .index-page__description_hide {
+      display: none;
+    }
     .programs {
       margin: 9px 0;
       grid-gap: 10px;
