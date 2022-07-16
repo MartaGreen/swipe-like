@@ -1,0 +1,75 @@
+-
+  var history = ['Главная', 'Умная площадка'];
+  var instructions = [
+    'Расположите ладони на краю горизонтальной скамьи.',
+    'Ноги поставьте на пол, напрягите пресс. На выдохе вытолкните вес тела вверх, ощущая работу трицепса. Локти при этом смотрят назад — строго не в стороны.',
+    'Отталкиваясь от скамьи как можно сильнее, раскрывая грудь — задержитесь в положении 1-2 сек.',
+    'На вдохе медленно опуститесь вниз, не сгибая коленей и держа пресс напряженным. В нижней точке движения локти должны быть параллельны полу',
+  ]
+  var sheduleTables = [
+    [
+      {exerciseSets: 1, exerciseItterations: 20},
+      {exerciseSets: 2, exerciseItterations: 20},
+      {exerciseSets: 3, exerciseItterations: 15},
+      {exerciseSets: 3, exerciseItterations: 15},
+      {exerciseSets: 5, exerciseItterations: 10},
+    ],
+    [
+      {exerciseSets: 3, exerciseItterations: 25},
+      {exerciseSets: 4, exerciseItterations: 20},
+      {exerciseSets: 5, exerciseItterations: 20},
+      {exerciseSets: 4, exerciseItterations: 15},
+      {exerciseSets: 5, exerciseItterations: 20},
+    ],
+    [
+      {exerciseSets: 3, exerciseItterations: 25},
+      {exerciseSets: 4, exerciseItterations: 25},
+      {exerciseSets: 4, exerciseItterations: 25},
+      {exerciseSets: 4, exerciseItterations: 25},
+      {exerciseSets: 5, exerciseItterations: 25},
+    ],
+  ]
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    include ../../components/header/header.pug
+
+    .page(class="exercise-page")
+      .page__history(class="program1-page__history")
+        each hist_item in history
+          span(class="history__item")= hist_item
+      include ../../components/back-btn/back-btn.pug 
+      +BackBtn('Назад')
+
+      h1(class="page__title exercise-page__title") Отжимания  от перекладины
+      ol(class="page__description exercise-page__description")
+        each instruction in instructions 
+          li(class="exercise-page__description-item ")= instruction
+
+      button(class="btn btn_yellow btn_main exercise-page__btn") Следующее упражнение
+
+      .exercise-page__schedule
+        .schedule__icon-wrapper
+          img(src="images/exercise1_icon.svg", alt="exercise_icon" class="schedule__icon")
+        .schedule__week-tables
+          each table, index in sheduleTables
+            table(class="schedule__week-table")
+              thead(class="week-table__head")
+                tr(class="week-table__head-item week-table__title")
+                  th(class="week-table__column-name" colspan='3') неделя — #{index+1}
+                tr(class="week-table__head-item")
+                  th(class="week-table__column-name week-table__column-day") день
+                  th(class="week-table__column-name week-table__column-sets") подходы
+                  th(class="week-table__column-name week-table__column-itterations") повторения
+              tbody(class="week-table__body")
+                each tableItem, index in table
+                  tr(class=`week-table__body-item ${index%2 == 0 && 'week-table__body-item_gray-bg'}`)
+                    td(class="week-table__column-content")= index+1
+                    td(class="week-table__column-content")= tableItem.exerciseSets
+                    td(class="week-table__column-content")= tableItem.exerciseItterations

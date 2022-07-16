@@ -1,5 +1,5 @@
 mixin Exercise({name, bgColor, iconSrc, exerciseIconMarkingClass})
-  .exercise(style=`background: ${bgColor}; background-image=url(${iconSrc})`)
+  a(style=`background: ${bgColor}; background-image=url(${iconSrc})` class="exercise" href="./exercise.html")
     .exercise__icon-wrapper(class=exerciseIconMarkingClass)
       img(src=iconSrc, alt="exercise_icon" class="exercise__icon")
     .exercise__description

@@ -16,6 +16,12 @@ const plugins = [
     template: path.resolve(__dirname, "src", "pages/program1", "program1.pug"),
     chunks: ["build", "program1"],
   }),
+  new HtmlWebpackPlugin({
+    title: "Exercise",
+    filename: "exercise.html",
+    template: path.resolve(__dirname, "src", "pages/exercise", "exercise.pug"),
+    chunks: ["build", "exercise"],
+  }),
   new HtmlWebpackPugPlugin(),
   new CleanWebpackPlugin(),
 ];
@@ -25,6 +31,7 @@ module.exports = {
     build: path.resolve(__dirname, "src", "build.js"),
     index: path.resolve(__dirname, "src", "pages/index", "index.js"),
     program1: path.resolve(__dirname, "src", "pages/program1", "program1.js"),
+    exercise: path.resolve(__dirname, "src", "pages/exercise", "exercise.js"),
   },
   output: {
     filename: "[name].[hash].js",

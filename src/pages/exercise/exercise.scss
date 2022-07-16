@@ -1,0 +1,109 @@
+.exercise-page {
+  .back-btn {
+    top: 60px;
+    margin-right: 0;
+  }
+  .exercise-page__description {
+    width: 100%;
+    line-height: 27px;
+    color: #090808;
+    margin: 31px 0;
+    padding: 0 24px;
+    letter-spacing: 0.16px;
+
+    .exercise-page__description-item {
+      margin-left: 2px;
+    }
+  }
+
+  .exercise-page__btn {
+    margin: 10px 0;
+  }
+
+  .exercise-page__schedule {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 68px;
+
+    .schedule__icon-wrapper {
+      width: 389px;
+      height: 384px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #3ea43b;
+
+      .schedule__icon {
+        height: 61%;
+      }
+    }
+
+    .schedule__week-tables {
+      width: 74.6%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(355px, 1fr));
+      grid-gap: 26px;
+
+      .schedule__week-table {
+        height: 226px;
+        border-spacing: unset;
+
+        .week-table__head {
+          .week-table__head-item {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            background: none;
+
+            &.week-table__title {
+              font-size: 20px;
+              line-height: 27px;
+              color: #f4f4f2;
+              background: #068145;
+
+              .week-table__column-name {
+                padding: 4px 0;
+              }
+            }
+
+            .week-table__column-name {
+              padding: 12px 0 8px 0;
+              font-weight: 600;
+
+              &.week-table__column-day {
+                width: 22.8%;
+              }
+              &.week-table__column-sets {
+                width: 34%;
+              }
+              &.week-table__column-itterations {
+              }
+            }
+          }
+        }
+
+        .week-table__body {
+          .week-table__body-item {
+            background: none;
+            text-align: center;
+
+            &.week-table__body-item_gray-bg {
+              background: #f4f4f2;
+            }
+
+            .week-table__column-content {
+              font-weight: 600;
+              font-size: 18px;
+              line-height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
