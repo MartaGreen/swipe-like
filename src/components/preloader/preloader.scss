@@ -1,0 +1,108 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  z-index: 10;
+
+  .loadingio-spinner-ellipsis-43xdb03q3oe {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+
+    .ldio-u68nmolcz6 {
+      div {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        transform: translate(80px, 80px) scale(1);
+        background: #e82d2d;
+        animation: ldio-u68nmolcz6 2.8571428571428568s infinite
+          cubic-bezier(0, 0.5, 0.5, 1);
+        box-sizing: content-box;
+        &:nth-child(1) {
+          background: #ff6262;
+          transform: translate(148px, 80px) scale(1);
+          animation: ldio-u68nmolcz6-r 0.7142857142857142s infinite
+              cubic-bezier(0, 0.5, 0.5, 1),
+            ldio-u68nmolcz6-c 2.8571428571428568s infinite step-start;
+        }
+        &:nth-child(2) {
+          animation-delay: -0.7142857142857142s;
+          background: #e82d2d;
+        }
+        &:nth-child(3) {
+          animation-delay: -1.4285714285714284s;
+          background: #ff6262;
+        }
+        &:nth-child(4) {
+          animation-delay: -2.142857142857143s;
+          background: #ffcc2d;
+        }
+        &:nth-child(5) {
+          animation-delay: -2.8571428571428568s;
+          background: #3ea43b;
+        }
+      }
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(1);
+      backface-visibility: hidden;
+      transform-origin: 0 0;
+    }
+  }
+}
+
+@keyframes ldio-u68nmolcz6 {
+  0% {
+    transform: translate(12px, 80px) scale(0);
+  }
+  25% {
+    transform: translate(12px, 80px) scale(0);
+  }
+  50% {
+    transform: translate(12px, 80px) scale(1);
+  }
+  75% {
+    transform: translate(80px, 80px) scale(1);
+  }
+  100% {
+    transform: translate(148px, 80px) scale(1);
+  }
+}
+@keyframes ldio-u68nmolcz6-r {
+  0% {
+    transform: translate(148px, 80px) scale(1);
+  }
+  100% {
+    transform: translate(148px, 80px) scale(0);
+  }
+}
+@keyframes ldio-u68nmolcz6-c {
+  0% {
+    background: #e82d2d;
+  }
+  25% {
+    background: #3ea43b;
+  }
+  50% {
+    background: #ffcc2d;
+  }
+  75% {
+    background: #ff6262;
+  }
+  100% {
+    background: #e82d2d;
+  }
+}

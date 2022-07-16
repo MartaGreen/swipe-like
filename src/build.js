@@ -7,3 +7,4 @@ import "./shared/styles/buttons.scss";
 import "./shared/styles/pages.scss";
 
 import "./components/header/header";
+import "./components/preloader/preloader";

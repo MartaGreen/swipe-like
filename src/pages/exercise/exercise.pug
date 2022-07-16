@@ -38,27 +38,30 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body 
-    include ../../components/header/header.pug
+    include ../../components/preloader/preloader.pug
 
-    .page(class="exercise-page")
-      .page__history(class="program1-page__history")
-        each hist_item in history
-          span(class="history__item")= hist_item
-      include ../../components/back-btn/back-btn.pug 
-      +BackBtn('Назад', 'program1.html')
+    .body__content(id="bodyContent" style="display: none")
+      include ../../components/header/header.pug
 
-      h1(class="page__title exercise-page__title") Отжимания&nbsp; от&nbsp;перекладины
-      ol(class="page__description exercise-page__description")
-        each instruction in instructions 
-          li(class="exercise-page__description-item ")= instruction
-      button(class="btn btn_yellow btn_main exercise-page__btn") Следующее упражнение
+      .page(class="exercise-page")
+        .page__history(class="program1-page__history")
+          each hist_item in history
+            span(class="history__item")= hist_item
+        include ../../components/back-btn/back-btn.pug 
+        +BackBtn('Назад', 'program1.html')
 
-      .exercise-page__schedule
-        .schedule__icon-wrapper
-          img(src="images/exercise1_icon.svg", alt="exercise_icon" class="schedule__icon")
-          span(class="schedule__icon-text") Отжимания от перекладины
-        .schedule__week-tables
-          include ../../components/week-table/week-table.pug
-          each table, index in sheduleTables
-            +WeekTable(table, index)
+        h1(class="page__title exercise-page__title") Отжимания&nbsp; от&nbsp;перекладины
+        ol(class="page__description exercise-page__description")
+          each instruction in instructions 
+            li(class="exercise-page__description-item ")= instruction
+        button(class="btn btn_yellow btn_main exercise-page__btn") Следующее упражнение
+
+        .exercise-page__schedule
+          .schedule__icon-wrapper
+            img(src="images/exercise1_icon.svg", alt="exercise_icon" class="schedule__icon")
+            span(class="schedule__icon-text") Отжимания от перекладины
+          .schedule__week-tables
+            include ../../components/week-table/week-table.pug
+            each table, index in sheduleTables
+              +WeekTable(table, index)
             

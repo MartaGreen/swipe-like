@@ -15,23 +15,26 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body 
-    include ../../components/header/header.pug
+    include ../../components/preloader/preloader.pug
 
-    main(class="page program1-page")
-      .page__history(class="program1-page__history")
-        each hist_item in history
-          span(class="history__item")= hist_item
+    .body__content(id="bodyContent" style="display: none")
+      include ../../components/header/header.pug
 
-      include ../../components/back-btn/back-btn.pug 
-      +BackBtn('Назад', './index.html')
+      main(class="page program1-page")
+        .page__history(class="program1-page__history")
+          each hist_item in history
+            span(class="history__item")= hist_item
 
-      h1(class="page__title program1-page__title") Программа 1
-        p(class="program1-page__title-footer") 3 недели | 6 упражнений
-      p(class="page__description program1-page__description") Для иллюстрации упражнений лучше конечно использовать анимацию, пусть и простую. Сможем ли мы получить исходники изображений в векторе (svg)? Нам так было бы удобнее делать анимацию. Размер изображений для разных упражнений должен быть одинаковый по размеру и пропорциям. Для каждого изображений одного упражнения - оборудование должно быть неподвижно и находиться в одном месте
-      button(class="btn btn_main btn_yellow program1-page__btn") Следующая программа
+        include ../../components/back-btn/back-btn.pug 
+        +BackBtn('Назад', './index.html')
 
-      .program1-page__exercises
-        include ../../components/exercise/exercise.pug 
-        each exercise in exercises
-          +Exercise(exercise)
+        h1(class="page__title program1-page__title") Программа 1
+          p(class="program1-page__title-footer") 3 недели | 6 упражнений
+        p(class="page__description program1-page__description") Для иллюстрации упражнений лучше конечно использовать анимацию, пусть и простую. Сможем ли мы получить исходники изображений в векторе (svg)? Нам так было бы удобнее делать анимацию. Размер изображений для разных упражнений должен быть одинаковый по размеру и пропорциям. Для каждого изображений одного упражнения - оборудование должно быть неподвижно и находиться в одном месте
+        button(class="btn btn_main btn_yellow program1-page__btn") Следующая программа
+
+        .program1-page__exercises
+          include ../../components/exercise/exercise.pug 
+          each exercise in exercises
+            +Exercise(exercise)
           
