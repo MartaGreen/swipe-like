@@ -47,16 +47,16 @@ html(lang="en")
       include ../../components/back-btn/back-btn.pug 
       +BackBtn('Назад')
 
-      h1(class="page__title exercise-page__title") Отжимания  от перекладины
+      h1(class="page__title exercise-page__title") Отжимания&nbsp;&nbsp;от перекладины
       ol(class="page__description exercise-page__description")
         each instruction in instructions 
           li(class="exercise-page__description-item ")= instruction
-
       button(class="btn btn_yellow btn_main exercise-page__btn") Следующее упражнение
 
       .exercise-page__schedule
         .schedule__icon-wrapper
           img(src="images/exercise1_icon.svg", alt="exercise_icon" class="schedule__icon")
+          span(class="schedule__icon-text") Отжимания от перекладины
         .schedule__week-tables
           each table, index in sheduleTables
             table(class="schedule__week-table")
