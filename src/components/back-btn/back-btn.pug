@@ -1,5 +1,5 @@
-mixin BackBtn(name)
-  button(class="back-btn" id="back-btn")
+mixin BackBtn(name, backLink)
+  button(class="back-btn" id="back-btn" onclick=`window.location.href='${backLink}'`)
     .back-btn__icon
       svg(width='23' height='15' viewbox='0 0 23 15' fill='none' xmlns='http://www.w3.org/2000/svg')
         path(d='M22 7.5H1M1 7.5L7.58824 14M1 7.5L7.58824 1' stroke='#090808' stroke-width='2' stroke-linecap='round' stroke-linejoin='round')
