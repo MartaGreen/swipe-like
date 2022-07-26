@@ -12,10 +12,11 @@ body {
 }
 
 textarea,
+input,
 input[type="text"],
 input[type="button"],
 input[type="submit"] {
-  -webkit-appearance: none;
+  -webkit-appearance: none !important;
   border-radius: 0;
   -webkit-border-radius: 0px;
 }
